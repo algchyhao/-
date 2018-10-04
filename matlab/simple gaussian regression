@@ -1,0 +1,4 @@
+function [G] = GaussPR(x, x_sp, G_sp) % data = [x_data,y_data] = [x_sp, G_sp]
+gprMdl = fitrgp(x_sp, G_sp);
+G = predict(gprMdl, x)
+end
